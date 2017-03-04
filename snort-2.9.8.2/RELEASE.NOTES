@@ -1,0 +1,34 @@
+2016-03-09 - Snort 2.9.8.2
+[*] New additions
+ *  Future-flow and DNS API exposed to lua detector.
+
+ *  Double VLAN tagging support.
+
+[*] Improvements
+ *  Performance improvements to AppID.
+
+ *  Stability improvements to file and ftp_telnet preprocessor.
+
+ *  Fixed several issues with SDF and obfuscation.
+
+ *  Resolved an issue of improper handling of malformed DNS host
+    in AppID.
+
+ *  HTTP PAF accepts all tokens between method and version strings
+    in a request URI.
+    
+ *  Resolved snort build issue with "--disable-perfprofiling" configure
+    option.
+
+ *  Enhanced mime parsing by adding support for detecting files
+    after unknown headers and no headers.
+ 
+ *  Fixed issue with gzip decompression. If the server response specifies
+    Content-Encoding as GZIP, but no Content-Length field for HTTP ver 1.0.
+
+ *  End of Header(EOH) identification for HTTP response header spanning multiple
+    packets.
+
+ *  Improved packet reassembly for HTTP.
+
+ *  Fixed Flash LZMA decompression issue.
