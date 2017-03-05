@@ -77,8 +77,9 @@ sudo apt-get install zlib1g-dev liblzma-dev openssl libssl-dev -y
 #And now let’s download, compile and install Snort:
 #
 cd ~/snort_src/
-https://www.snort.org/downloads/archive/snort/snort-2.9.8.2.tar.gz
- tar -zxvf snort-2.9.8.2.tar.gz
+wget https://www.snort.org/downloads/archive/snort/snort-2.9.8.2.tar.gz
+tar -zxvf snort-2.9.8.2.tar.gz
+cd ~/snort_src/snort-2.9.8.2
 ./configure --enable-sourcefire
 make
 sudo make install
@@ -86,7 +87,7 @@ sudo make install
 #Update the shared libraries, otherwise you will get an error when you try to run Snort:
 sudo ldconfig
 
-Create a symlink to the Snort binary:
+#Create a symlink to the Snort binary:
 sudo ln -s /usr/local/bin/snort /usr/sbin/snort
 
 #
